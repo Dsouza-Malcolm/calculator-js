@@ -13,7 +13,10 @@
 
 body {
   background-color: rgb(122, 160, 249);
-  height: fit-content;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .red-accent {
@@ -21,6 +24,7 @@ body {
 }
 
 #app {
+  width: 90%;
   background-color: var(--drk-black);
   height: fit-content;
   color: white;
@@ -127,11 +131,6 @@ button {
 }
 
 @media only screen and (min-width: 786px) {
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   #app {
     width: 30%;
   }
