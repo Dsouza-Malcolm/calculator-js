@@ -1,0 +1,138 @@
+:root {
+  --drk-black: #222831;
+  --lgt-black: #31363f;
+  --red-accent: #f75f5f;
+  --white: #eeeeee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(122, 160, 249);
+  height: fit-content;
+}
+
+.red-accent {
+  color: var(--red-accent);
+}
+
+#app {
+  background-color: var(--drk-black);
+  height: fit-content;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  user-select: none;
+}
+
+.header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+}
+
+.mode-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+  background-color: var(--lgt-black);
+  border-radius: 1rem;
+  height: 33px;
+  width: 80px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+
+.mode-btn svg {
+  width: 25px;
+  height: 25px;
+  stroke: #aaa;
+}
+
+.active-mode {
+  stroke: #fff;
+}
+
+.calculator-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: var(--white);
+  gap: 1rem;
+  height: 8rem;
+  padding: 2rem 2rem;
+  user-select: none;
+}
+
+.calculator-screen {
+  background-color: var(--drk-black);
+  color: var(--white);
+  width: 100%;
+  min-height: 50px;
+  text-align: right;
+  font-size: 3rem;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  overflow: hidden;
+}
+
+.calculation {
+  font-size: 1.6rem;
+  min-height: 30px;
+  height: auto;
+  text-align: right;
+  color: #aaa;
+}
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  /* background-color: var(--lgt-black); */
+}
+
+button {
+  text-align: center;
+  padding: 0.6rem 0;
+  background-color: var(--lgt-black);
+  color: var(--white);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0px -2px 2px -10px rgba(0, 0, 0, 0.4),
+    0px 2px 2px -10px rgba(0, 0, 0, 0.4), 0px 2px 2px -0px rgba(0, 0, 0, 0.4),
+    2px 0px 2px -0px rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 8px;
+}
+
+.key:last-child {
+  background-color: var(--red-accent);
+}
+
+@media only screen and (min-width: 786px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #app {
+    width: 30%;
+  }
+}
