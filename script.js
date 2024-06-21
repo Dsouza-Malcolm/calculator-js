@@ -248,5 +248,4 @@ const percentage = () => {
   resultDisplayed = true;
 };
 
-// defaultScreen();
 updateScreen();
