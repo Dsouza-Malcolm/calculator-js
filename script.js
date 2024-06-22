@@ -33,7 +33,7 @@ keys.addEventListener('click', (e) => {
 
     case 'all-clear':
       clear();
-      return;
+      break;
 
     case 'del':
       del();
@@ -176,8 +176,8 @@ const updateScreen = () => {
 };
 
 const clear = () => {
-  screen.textContent = '0';
-  currentNumber = '';
+  currentNumber = '0';
+  // screen.textContent = currentNumber;
   previousNumber = '';
   calculationDisplay.textContent = '';
   calculationStr = '';
@@ -230,7 +230,7 @@ const frac = () => {
 };
 
 const togglePlusMinusFunc = () => {
-  if (currentNumber === '0') return;
+  if (currentNumber === '0' || currentNumber === '') return;
 
   if (togglePlusMinus) {
     currentNumber = currentNumber.slice(1, currentNumber.length);
